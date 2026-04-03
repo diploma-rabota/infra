@@ -1,0 +1,52 @@
+Минимальные сущности на фазе 1
+
+user-service
+    Сущность User
+        id
+        username
+        email
+        createdAt
+API
+    POST /api/users
+    GET /api/users/{id}
+    GET /api/users
+
+catalog-service
+    Сущность Product
+        id
+        name
+        description
+        price
+        quantity
+        createdAt
+API
+    POST /api/products
+    GET /api/products/{id}
+    GET /api/products
+
+order-service
+    Сущность Order
+        id
+        userId
+        productId
+        quantity
+        totalPrice
+        status
+        createdAt
+API
+    POST /api/orders
+    GET /api/orders/{id}
+    GET /api/orders
+
+Пока без вызова catalog-service — это уже фаза 2.
+
+notification-service
+
+На фазе 1 просто создаём каркас:
+
+пустой Spring Boot сервис;
+базовая конфигурация;
+actuator;
+swagger при желании можно даже не подключать сразу.
+
+Без бизнес-логики, просто как задел на следующий этап.
